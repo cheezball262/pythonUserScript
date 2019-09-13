@@ -18,4 +18,4 @@ Python Scripts:<br>
 	
 
      usage: python deleteUser <userid>
-	   	ex: python deleteUser.py bob1 
+	ex: python deleteUser.py bob1 
