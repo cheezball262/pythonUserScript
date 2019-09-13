@@ -2,11 +2,16 @@ import os
 import sys
 import shutil
 
-#assumes arg1 is the username and arg2 is the name of the public key filename
+#arg1 is the username
+#arg2 is user full name (stored in comment field)
+#arg3 is the name of the public key filename
+#default shell is bash
 
 username = sys.argv[1]
-pubkeyFilename = sys.argv[2]
-userAddString = "useradd -m -d /home/" + username+ "  -s /bin/bash " + username
+userComment = sys.argv[2]
+pubkeyFilename = sys.argv[3]
+
+userAddString = "useradd -m -c " + userComment + " -d /home/" + username+ "  -s /bin/bash " + username
 userSshDir = " /home/"+username+"/.ssh/
 
 os.system(userAddString)
